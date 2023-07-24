@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>A Choose Your Own Webdesign</title>
-  </head>
+
+<head>
+  <style>
+  .card {
+      width: 80px;
+      height: 80px;
+      top:400px; 
+      left:500px;
+      position: absolute;
+    }
+    .card .img-top {
+        display: none;
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        width: 90px;
+        height: 90px;
+    }
+    .card:hover .img-top {
+        display: inline;
+    }
+  </style>
+
+  <title>A Choose Your Own Webdesign</title>
+</head>
     
   <body style="background-color:aquamarine;" background="assets/images/rainferngiphy.gif">
-    <h1 style="background-color:powderblue;"> bap the cat </h1>
+    <h1 style="background-color:rgba(255, 243, 169,0.3);"> Hello there </h1>
 
-    <audio controls>
+    <audio controls loop style="background-color:rgba(255, 243, 169,0.3);">
       <source src="assets/audio/CelloRain.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
@@ -16,7 +38,12 @@
     <img src="assets/images/catpaws.gif" alt="white cat with jazz hands">
 
     <p style="color:pink;"><a href="physics/index.html">physics!</a></p>
-    <p style="color:pink;"><a href="recipes/index.html">recipes!</a></p>
+
+    <div class="card">
+      <a href="recipes/index.html"><img src="assets/images/mushrooms1.png" style ="width:80px;height:80px;" alt="Card Back"></a>
+      <a href="recipes/index.html"><img src="assets/images/mushrooms1_glow.png" class="img-top" alt="Card Front"></a>
+    </div>
     
+
   </body>
 </html>
