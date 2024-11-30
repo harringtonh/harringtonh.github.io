@@ -8,21 +8,36 @@ body {
 }
 
 .editor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
     position: relative;
-    border: 1px solid #ccc;
-    margin: 20px 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
+
 
 canvas {
     position: absolute;
-    top: 0;
+    top: 40;
     left: 0;
 }
 
 .controls {
+    position: absolute; /* Make the buttons overlay the canvas */
+    top: 10px; /* Adjust position relative to the top of the page or editor */
+    left: 10px; /* Adjust position relative to the left of the page or editor */
+    z-index: 10; /* Ensure buttons are on top of the canvas */
     display: flex;
     gap: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Optional: Add a translucent background */
+    padding: 5px;
+    border-radius: 5px;
 }
+
 
 button.color {
     width: 30px;
